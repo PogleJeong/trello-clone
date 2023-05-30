@@ -1,0 +1,25 @@
+react-beautiful-dnd
+npm i --save-dev @types/react-beautiful-dnd
+
+[api]
+
+DragDropContext - 드래그앤드롭이 기능하는 영역
+Droppable - 드래그앤드롭이 가능한 하나의 리스트 영역
+Draggable - 드래그가 가능한 영역
+
+
+[구조]
+
+DragDropContext [onDrageEnd]
+
+    Droppable [droppableId]
+
+        (provided)
+
+            ul [ref=provided.innerRef, {...provided.droppableProps}]
+
+                Draggable [draggableId, index]
+
+                    (provided) =>
+
+                        li [ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}]
